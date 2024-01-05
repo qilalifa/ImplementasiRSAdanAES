@@ -1,0 +1,54 @@
+Dunia teknologi informasi dan komunikasi sudah semakin berkembang dengan pesat seiring berjalannya waktu banyaknya penyedia layanan web yang menyediakan infromasi sangat banyak. Informasi seperti misalnya data teks yang bisa dijadikan sumber informasi, dengan contohnya adalah data teks yang diambil dari Twitter.
+Twitter adalah layanan jejaring sosial dan microblog daring yang memungkinkan penggunanya untuk mengirim dan membaca pesan berbasis teks hingga 140 karakter, yang dikenal dengan sebutan kicauan (tweet). Twitter didirikan pada bulan Maret 2006 oleh Jack Dorsey, dan situs jejaring sosialnya diluncurkan pada bulan Juli. Sejak diluncurkan, twitter telah menjadi salah satu dari sepuluh situs yang paling sering dikunjungi di internet, dan dijuluki dengan pesan singkat dari internet. Di twitter, penguna tak terdaftar hanya bisa membaca kicauan, sedangkan pengguna terdaftar bisa menulis kicauan melalui antarmuka situs web, pesan singkat (SMS) atau melalui berbagai aplikasi untuk perangkat seluler
+Dalam, didalam sebuah Machine Learning terdapat beberapa parameter yang mempunyai karakter objek dengan metode klasifikasi ini. Ada dua tahap dalam pembuatan model klasifikasi ini yaitu yang pertama adalah melatih data dan membedakannya dengan kelas yang berbeda, dan yang kedua adalah klasifikasi mengevaluasi objek yang tidak dikenal.
+Menurut IBM, metode machine learning merupakan cabang dari kecerdasan buatan (Artificial Intelligence) dan ilmu komputer yang berfokus pada penggunaan data dan algoritma untuk meniru cara manusiabelajar dan secara bertahap dapat meningkatkan akurasinya. Semakin bagus algoritma machine learning yang digunakan maka akan semakin baik pula keputusan yang keluar.
+Adapun maksud dan tujuan penulis terkait impelementasi klasifikasi narasi bersifat informative atau non-imformative pada media sosial twitter TMC Polda Metro Jaya terhadap pandangan masyarakat, yang diambil dari tweet dengan keyword @TMCPoldaMetro di aplikasi Twitter. Penulis menggunakan metode berupa klasifikasi alogoritma Naive Bayes.
+Naïve Bayes atau multinomial naïve bayes merupakan metode yang digunakan untuk mengklasifikasikan sekumpulan dokumen. Algoritma ini memanfaatkan metode probabilitas dan statistik yang dikemukakan oleh ilmuwan Inggris Thomas Bayes. Metode NB menempuh dua tahap dalam proses klasifikasi teks, yaitu tahap pelatihan dan tahap pengujian (klasifikasi). Pada tahap pelatihan dilakukan proses analisis terhadap sampel dokumen berupa pemilihan vocabulary, yaitu kata yang mungkin muncul dalam koleksi dokumen sampel yang sedapat mungkin dapat menjadi representasi dokumen.
+Selanjutnya adalah penentuan probabilitas prior bagi tiap kategori berdasarkan sampel dokumen. Pada tahap klasifikasi ditentukan nilai kategori dari suatu dokumen berdasarkan term yang muncul dalam dokumen yang diklasifikasi.
+Berikut adalah contoh dari penelitian Proses klasifikasi pada penelitian ini menggunakan metode klasifikasi Naïve bayes Classifier (NBC) dan Support Vector Machine (SVM) dengan preprocessing data menggunakan tokenisasi, cleansing dan filtering. Data yang digunakan adalah tweet dalam bahasa Indonesia dengan tagar HateSpeech (#HateSpeech), dengan jumlah dataset sebanyak 522 tweet yang didistribusikan secara merata menjadi dua sentimen HateSpeech dan GoodSpeech. Hasil akurasi tertinggi didapatkan saat menggunakan metode klasifikasi Support Vector Machine (SVM) dengan tokenisasi unigram, stopword list Bahasa Indonesia dan emoticons, dengan nilai rata-rata akurasi mencapai 66,6%, nilai presisi 67,1%, nilai recall 66,7% nilai TP rate 66,7% dan nilai TN rate 75,8%.
+1. Crawling data dari Twitter
+Tahap pertama yaitu melakukan pengumpulan data dengan aplikasi RapidMiner Studio, create connection untuk menghubungkan aplikasi RapidMiner ke twitter agar dapat terhubung maka akan didapatkan nomor token untuk bisa mengakses data melalui akun twitter.
+2. Labelling
+Tahap kedua yaitu melakukan klasifikasi label pada data yang sudah terkumpul dari twitter.
+3. Preprocessing Gataframework
+Preprocessing menjadi tahap awal dalam klasifikasi teks untuk mempersiapkan data teks sebelum digunakan pada proses lainnya. Pada tahap ini akan mengubah data teks menjadi bentuk yang lebih baik sehingga menghasilkan informasi teks dengan kualitas yang baik dan siap digunakan pada proses selanjutnya.
+4. Preprocessing Tahap 2
+Tahap ini akan mengimport data dari excel yang sudah melewati Preprocessing tahap 1 data yang digunakan yaitu tabel no, class dan Indonesia stopword lalu selanjutnya diberi atribut dengan mengedit transform case, tokenize, filter token by length (4,25), SMOTE dan stemming imbuhan.
+5. Preprocessing Tahap 3
+Stopword removal, merupakan tahap penghapusan kata-kata yang terkandung pada daftar kata stopword. Kata-kata stopwords dapat menambah dimensi data pada proses klasifikasi Stopword removal juga digunakan untuk menghilangkan kata yang tidak relevan atau yang tidak bermakna.
+6. Deployment
+Tahap terakhir pembuatan program menggunakan tools MySQL merupakan salah satu database yang bersifat open source yang populer di dunia, dimana saat ini digunakan lebih dari 100 juta penguna diseluruh dunia MYSQL turunan dari SQL (Structured Query Languaqe) yang sering digunakan oleh para programmer dalam pembuatan program. Sistem database MYSQL selain mudah memahami sintaks dan pengaksesan juga di dukung beberapa fitur seperti Multithreaded, multi-user dan SQL database managemen sistem.
+Dan tools XAMPP adalah sebuah software web server Apache yang didalamnya sudah tersedia database server MYSQL dan mendukung PHP programming. XAMPP merupakan singkatan dari X (untuk empat sistem operasi), Apache, MySQL, PHP, Perl. XAMPP menyediakan berbagai macam layanan salah satunya adalah Apache untuk web server.
+7. Table Matrix
+Dalam penelitian ini hasil dari pengujian akan di evaluasi dalam tabel Accuracy, Pression, Recall dan AUC.
+Nilai Accuracy, adalah perhitungan jumlah proporsi prediksi yang benar. Accuracy dirumuskan dalam persaman.
+Nilai Pression, yakni tingkat ketepatan prediksi dari suatu sistem, dengan menghitung prediksi positif dari total data yang diprediksi sistem, termasuk prediksi salah.
+Nilai Recall, yaitu, nilai tingkat keberhasilan dalam mengenali suatu kelas yang harus dikenal.
+Nilai AUC, digunakan untuk mengukur kinerja diskriminatif dengan memperkirakan probabilitas output yang sudah di dapatkan hasilnya dari sampel yang dipilih secara acak dari populasi positif atau negatif, semakin besar nilai AUC, semakin kuat klasifikasi yang dihasilkan. Karena AUC merupakan bagian dari daerah unit persegi, nilainya yang dihasilkan akan selalu sama yang dihasilkannya, antara 0,0 dan 1,0.
+Berdasarkan metode dan tahapan penelitian yan sudah dijabarkan, maka langkah selajutnya penulis akan menjelaskan hasil dari pembahasan terhadap penelitian yang penulis kerjakan sebagai berikut :
+Crawling data dari Twitter.
+Pengumpulan data dengan aplikasi RapidMiner Studio, create connection untuk menghubungkan aplikasi RapidMiner ke twitter, gunakan operasi search twitter menggunakan keyword @TMCPoldaMetro dengan jumlah data 1001.
+Labelling
+Dari 1000 jumlah data, di tahap ini akan dilakukan labelling, penulis menggunakan klasifikasi narasi bersifat Informative dan Non-Informative.
+Preprocessing Gataframework
+Dari hasil labelling, maka selanjutnya akan masuk di tahan Preprocessing tahap 1, dengan membaginya ke dalam beberapa file yang memuat 50 data dikarenakan keterbatasan web server pada Gataframework. Di tahap ini dilakukan cleansing dengan mengunakan beberapa teknik pada website Gataframework seperti @annotation Removal, Remove Hastag, Regexp, Transformation Remove URL, Indonesian Stemming dan Indonesian Stop Removal.
+@annotation Removal, tujuannya untuk mengahapus annotation didalam teks tweet. Annotation sendiri salah satu noise yang tidak memiliki arti.
+Remove Hastag, tujuannya untuk mengahpus tagar pada teks tweet.
+Regexp, tujuanya untuk menghapus simbol-simbol pada teks tweet.
+Transformation Remove URL, tujuannya untuk mengapus adanya URL/link yang terdapat pada teks tweet.
+Indonesian Stemming, merupakan proses menemukan kata dasar dari kata berimbuhan (affixed word) dengan cara menghilangkan semua imbuhan (affix) yang terdiri dari awalan (prefix), sisipan (infix), akhiran (suffix) dan kombinasi awalan dan akhiran (confix).
+Indonesian Stop Removal, tujuannya untuk menghapus kata penghubung dalam teks tweet.
+Preprocessing Tahap 2
+Pada tahapan ini akan dilakukan pengujian melalui aplikasi RapidMiner, di Preprocessing Tahap 2 harus melewati beberapa proses uji coba pada data sehingga menghasilkan data yang lebih akurat.
+Tahap ini akan mengimport data dari excel yang sudah melewati Preprocessing tahap 1 data yang digunakan yaitu tabel no, class dan Indonesia stopword, lalu kemudia melakukan perubahan pada parameter role menjadi status.
+Pada Preprocessing Tahap 2 ini, ada beberapa proses yaitu :
+1. Transform Cases, ini bertujuan untuk membuat teks tweet dari huruf kapital ke huruf kecil biasa.
+2. Tokenize, ini bertujuan untuk memisahkan kata per kata dari suatu teks kalimat.
+3. Filter Token By Length (4,25), ini bertujuan untuk memfilter kata-kata yang panjangnya 4 sampai 25 karakter.
+4. Stemming imbuhan, ini bertujuan untuk menghilangkan imbuhan pada data seperti “di”, “nya”,”an” dan imbuhan lainnya.
+Preprocessing Tahap 3
+Pada tahap ini dilakukan pembobotan nilai pada data yang dihasilkan dari proses sebelumnya, pembobotan ini nantinya untuk mengetahui teks tersebut relevan dengan objek yang penulis teliti.
+Dalam Preprocessing Tahap 3 adanya penambahan operator filter stopword. Data ini diimpor dari data hasil nilai pembobotan masing-masing kata.
+Tahap terakhir hasil dari proses metode yang sudah didapatkan, maka di tahap ini akan dilakukan untuk menguji hasil dari klasifikasi dengan menggunakan tabel matrix dari sejumlah data yang sudah diuji, untuk mencari nilai Accuracy, Pression, Recall dan AUC
+Dengan menggunakan algoritma Naive Bayes, maka diperoleh nilai Accuracy sebesar 81,7%, nilai Pression sebesar 81,30%, nilai Recall sebesar 83,03% dan AUC sebesar 0,847.
+Pengujian terhadap hasil crawling dataset di media sosial twitter dengan keyword @TMCPoldaMetro dengan menggunakan algortima Naive Bayes telah berhasil diteliti, metode yang digunakan text mining dan naive bayes terbukti berhasil mengklasifikasikan narasi yang bersifat Informative dan Non-Imformative dengan adanya hasil dari nilai-nilai yang diperoleh penulis yakni diperoleh nilai Accuracy sebesar 81,7%, nilai Pression sebesar 81,30%, nilai Recall sebesar 83,03% dan AUC sebesar 0,847 yang dijabarkan melalui tabel Matrix.
